@@ -6,8 +6,8 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  provider = "postgresql"
+  url      = "postgres://avnadmin:AVNS_QcDE3g1ENti0Ocavpic@sparsh-pyash310082007-018f.c.aivencloud.com:14323/defaultdb?sslmode=require"
 }
 
 model BlogPost {
