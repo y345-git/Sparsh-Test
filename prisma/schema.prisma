@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model BlogPost {
+  id        Int      @id @default(autoincrement())
+  title     String
+  excerpt   String
+  content   String
+  image     String
+  author    String
+  date      DateTime
+  category  String
+  readTime  String
+  color     String
+  status    String @default("Draft")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("blog_posts")
+} 
